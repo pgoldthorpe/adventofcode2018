@@ -1,21 +1,19 @@
 with open("input.txt") as f:
   data = f.read().splitlines()
 
-freq = [int(i) for i in data]
+freq_list = [int(i) for i in data]
 
- 
-seen = set()
-val = 0
-cont = True
+seen_freq = set()
+value = 0
+repeat = True
 
-while cont:
-  for i in freq:
-    val += i
-    if val in seen:
-      print("duplicate found:", val)
-      cont = False
+while repeat:
+  for i in freq_list:
+    value += i
+    if value in seen:
+      repeat = False
       break
-    seen.add(val)
+    seen.add(value)
 
 if __name__ == "__main__":
   print("Solution to problem 1 is {}".format(sum(freq)))
