@@ -10,11 +10,11 @@ repeat = True
 while repeat:
   for i in freq_list:
     value += i
-    if value in seen:
+    if value in seen_freq:
       repeat = False
       break
-    seen.add(value)
+    seen_freq.add(value)
 
 if __name__ == "__main__":
-  print("Solution to problem 1 is {}".format(sum(freq)))
-  print("Solution to problem 2 is {}".format(val))
+  print("Solution to problem 1 is {}".format(sum(freq_list)))
+  print("Solution to problem 2 is {}".format(value))
