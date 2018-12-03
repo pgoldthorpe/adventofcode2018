@@ -1,8 +1,8 @@
+# Read input file and create list of data
 with open("input.txt") as f:
   data = f.read().splitlines()
 
 freq_list = [int(i) for i in data]
-
 
 def find_duplicate_frequency(freq_list):
   """
@@ -16,7 +16,7 @@ def find_duplicate_frequency(freq_list):
   
   Returns
   -------
-  out : int
+  duplicate_freq : int
       A single value containing the first repeated frequency.
   
   Example
