@@ -8,10 +8,12 @@ def duplicate(iterable):
         count[i] = count.get(i, 0) + 1
     return count
 
+
 doublet, triplet = 0, 0
 for line in data:
     doublet += (2 in duplicate(line).values())
     triplet += (3 in duplicate(line).values())
+# This is not an efficient method as it calls the duplicate function twice for each line
 
 if __name__ == "__main__":
   print("Solution to problem 1 is {}".format(doublet * triplet))
