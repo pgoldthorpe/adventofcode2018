@@ -15,12 +15,13 @@ def sheet(matrix, x, y, w, h):
 
 fabric = create_matrix(1000,1000)
 for line in data:
-  m = re.search('expression', line)  # haven't figured out the expression to separate digits into groups
-  _, x, y, w, h = map(int, m.groups())
-  fabric = sheet(fabric, x, y, w, h)
+  _, _, x, y, _, w, h = re.split('x|,|:| ', line)
+  fabric = sheet(fabric, int(x), int(y), int(w), int(h))
 
-# overlap = sum(i>1 for i in ... for j in ...)
+count = 0
+for i in range(1000):
+    count += sum(i>1 for i in fabric[i])
 
 if __name__ == "__main__":
-  print("Solution to problem 1 is {}".format(fabric)) # overlap
+  print("Solution to problem 1 is {}".format(count))
   print("Solution to problem 2 is {}".format('hello'))
