@@ -33,15 +33,12 @@ def duplicate(iterable):
     count = dict()
     for i in iterable:
         count[i] = count.get(i, 0) + 1
-    return (2 in count.values(), 3 in count.values()) # Hardcoded and messy. Will review.
+    return (2 in count.values(), 3 in count.values())
 
-
-# loop over the data list, incrementing the number of times each string has
-# either two or three repeated elements. Will review.
 twos, threes = 0, 0
-for i in range(len(data)):
-    twos += duplicate(data[i])[0]
-    threes += duplicate(data[i])[1]
+for line in data:
+    twos += duplicate(line)[0]
+    threes += duplicate(line)[1]
 
 if __name__ == "__main__":
   print("Solution to problem 1 is {}".format(twos*threes))
