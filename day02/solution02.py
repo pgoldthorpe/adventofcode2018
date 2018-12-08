@@ -10,12 +10,13 @@ def duplicate(iterable):
         count[i] = count.get(i, 0) + 1
     return count
 
-
+# The following is not an efficient method as it calls the duplicate function
+# twice for each line instead of calling once and checking the 2's and 3's
 doublet, triplet = 0, 0
 for line in data:
     doublet += (2 in duplicate(line).values())
     triplet += (3 in duplicate(line).values())
-# This is not an efficient method as it calls the duplicate function twice for each line
+
 
 # Returns number of matching letters
 def match(str1, str2):
