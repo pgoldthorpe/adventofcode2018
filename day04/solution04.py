@@ -3,4 +3,7 @@ import datetime
 with open(".\day04\input.txt") as f:
   data = f.read().splitlines()
 
-sorted(data)
+data = sorted(data)
+
+for i in data:
+  print(i)
