@@ -10,11 +10,11 @@ def polymer(chain):
             polymer.append(i)
     return len(polymer[1:])
 
-minimize = []
+polymer_dict = {}
 for i in range(65,91):
-    string = data[0].replace(chr(i),"").replace(chr(i+32),"")
-    minimize.append(polymer(string))
+    string = data[0].replace(chr(i), "").replace(chr(i + 32), "")
+    polymer_dict[chr(i)] = polymer(string)
 
 if __name__ == "__main__":
   print("Solution to problem 1 is {}".format(polymer(data[0])))
-  print("Solution to problem 2 is {}".format(min(minimize)))
+  print("Solution to problem 2 is {}".format(min(polymer_dict.values())))
