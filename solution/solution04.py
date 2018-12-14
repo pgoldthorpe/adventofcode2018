@@ -1,6 +1,6 @@
 import datetime
 
-with open(".\day04\input.txt") as f:
+with open(".\input\input04.txt") as f:
   data = f.read().splitlines()
 
 data = sorted(data)

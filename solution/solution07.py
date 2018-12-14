@@ -1,4 +1,4 @@
-with open(".\day07\input.txt") as f:
+with open(".\input\input07.txt") as f:
   data = f.read().splitlines()
 
 data = [(a[5], a[36]) for a in data]

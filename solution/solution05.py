@@ -1,4 +1,4 @@
-with open(".\day05\input.txt") as f:
+with open(".\input\input05.txt") as f:
   data = f.read().splitlines()
 
 def polymer(chain):
