@@ -1,7 +1,7 @@
 from itertools import combinations
 
 # Read input file and create list of data
-with open(".\day02\input.txt") as f:
+with open(".\input\input02.txt") as f:
   data = f.read().splitlines()
 
 def duplicate(iterable):

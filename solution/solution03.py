@@ -1,7 +1,7 @@
 import re
 
 # Read input file and create list of data
-with open(".\day03\input.txt") as f:
+with open(".\input\input03.txt") as f:
   data = f.read().splitlines()
 
 def create_matrix(cols, rows):
