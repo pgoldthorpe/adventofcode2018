@@ -1,25 +1,20 @@
-# Read input file and create list of data
-with open("./input/input01.txt") as f:
-  data = f.read().splitlines()
+from AOC import Advent
 
-freq_list = [int(i) for i in data]
+day1 = Advent(2018, 1)
+data = list(map(int, day1.input_data))
 
 def find_duplicate_frequency(freq_list):
 
   seen_freq = set()
   value = 0
-  repeat = True
 
-  while repeat:
+  while True:
     for freq in freq_list:
       value += freq
       if value in seen_freq:
-        repeat = False
-        break
+        return value
       seen_freq.add(value)
-  
-  return value
 
 if __name__ == "__main__":
-  print("Solution to problem 1 is {}".format(sum(freq_list)))
-  print("Solution to problem 2 is {}".format(find_duplicate_frequency(freq_list)))
+  print("Solution to problem 1 is {}".format(sum(data)))
+  print("Solution to problem 2 is {}".format(find_duplicate_frequency(data)))
