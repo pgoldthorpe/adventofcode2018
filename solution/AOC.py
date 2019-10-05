@@ -10,8 +10,8 @@ class Advent:
     def __init__(self, year, day):
         self.year = year
         self.day = day
-        self.input_filename = os.path.abspath(os.path.join(os.path.dirname(__file__), "../input/input{:0>2}".format(self.day)))
-        self.output_filename = os.path.abspath(os.path.join(os.path.dirname(__file__), "../output/output{:0>2}".format(self.day)))
+        self.input_filename = os.path.abspath(os.path.join(os.path.dirname(__file__), "../input/input{:0>2}.txt".format(self.day)))
+        self.output_filename = os.path.abspath(os.path.join(os.path.dirname(__file__), "../output/output{:0>2}.txt".format(self.day)))
         self.download_input()
         self.load_input()
 
